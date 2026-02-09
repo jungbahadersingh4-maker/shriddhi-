@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Shriddhi 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', cursive, sans-serif;
+      background: #ffb6c1; /* soft pink */
+      color: #ffffff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 60px;
+      font-size: 3.5em;
+      text-shadow: 0 0 10px rgba(255,255,255,0.7);
+    }
+
+    .message {
+      max-width: 900px;
+      margin: 40px auto;
+      font-size: 1.6em;   /* LARGE MESSAGE */
+      line-height: 2;
+      padding: 35px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 30px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 25px rgba(255, 105, 180, 0.6);
+    }
+
+    h2 {
+      font-size: 2.4em;
+      margin-top: 50px;
+      text-shadow: 0 0 10px rgba(255,255,255,0.6);
+    }
+
+    #countdown {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+
+    footer {
+      margin: 60px 0 30px;
+      font-size: 1.1em;
+      opacity: 0.95;
+    }
+
+    /* Floating Roses */
+    .rose {
+      position: fixed;
+      bottom: -50px;
+      font-size: 30px;
+      animation: floatUp linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Shriddhi 💖</h1>
+
+  <div class="message">
+    Hey you 🥹🌸  
+    <br><br>
+    I don’t know how to explain this properly,  
+    but meeting you on Instagram on  
+    <strong>20 February 2025</strong>  
+    changed something very quietly inside me.
+    <br><br>
+    You became my comfort without trying,  
+    my smile without effort,  
+    and that thought that appears randomly  
+    and suddenly makes everything feel lighter.
+    <br><br>
+    Even with the distance,  
+    you feel closer than most people around me.
+    <br><br>
+    If you ever doubt yourself,  
+    just remember —  
+    there is someone who genuinely cares about you,  
+    thinks about you,  
+    and smiles because you exist 💗
+  </div>
+
+  <h2>Our Time Together 🌹</h2>
+  <div id="countdown"></div>
+
+  <!-- SECRET LINK TO PROPOSAL -->
+  <p style="margin-top:50px; font-size:1.3em; opacity:0.9;">
+    🤍 <em>I made something small… only if you’re curious</em>
+    <br><br>
+    <a href="proposal.html"
+       style="
+         color:#fff;
+         background:#ff69b4;
+         padding:12px 26px;
+         border-radius:30px;
+         text-decoration:none;
+         font-weight:bold;
+         box-shadow:0 0 15px rgba(255,105,180,0.8);
+       ">
+       Tap here 💌
+    </a>
+  </p>
+
+  <footer>
+    Made softly, slowly, and honestly — just for you 💕
+  </footer>
+
+  <!-- COUNTDOWN SCRIPT -->
+  <script>
+    const startDate = new Date("2025-02-20T00:00:00");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = now - startDate;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+      document.getElementById("countdown").innerHTML =
+        `It’s been <strong>${days}</strong> days,
+         <strong>${hours}</strong> hours,
+         and <strong>${minutes}</strong> minutes
+         since our first hello 💞`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+  </script>
+
+  <!-- ROSES -->
+  <script>
+    function createRose() {
+      const rose = document.createElement("div");
+      rose.classList.add("rose");
+      rose.innerHTML = "🌹";
+      rose.style.left = Math.random() * 100 + "vw";
+      rose.style.animationDuration = (5 + Math.random() * 5) + "s";
+      document.body.appendChild(rose);
+
+      setTimeout(() => {
+        rose.remove();
+      }, 10000);
+    }
+
+    setInterval(createRose, 350);
+  </script>
+
+</body>
+</html>
