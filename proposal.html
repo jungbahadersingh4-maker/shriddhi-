@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Just One Question 💗</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffc0cb;
+      color: #ffffff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-top: 80px;
+      font-size: 3.2em;
+      text-shadow: 0 0 12px rgba(255,255,255,0.7);
+    }
+
+    p {
+      max-width: 800px;
+      margin: 30px auto;
+      font-size: 1.5em;
+      line-height: 2;
+      padding: 30px;
+      background: rgba(255,255,255,0.25);
+      border-radius: 30px;
+      box-shadow: 0 0 25px rgba(255,105,180,0.6);
+    }
+
+    button {
+      font-size: 1.5em;
+      padding: 14px 32px;
+      margin: 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background: #ff69b4;
+      color: white;
+      box-shadow: 0 0 15px rgba(255,105,180,0.8);
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    #hippo {
+      font-size: 100px;
+      margin-top: 40px;
+      display: none;
+      animation: dance 0.8s infinite alternate;
+    }
+
+    @keyframes dance {
+      0% { transform: rotate(-12deg) translateY(0); }
+      100% { transform: rotate(12deg) translateY(-15px); }
+    }
+
+    #secretLink {
+      display: none;
+      margin-top: 50px;
+      font-size: 1.3em;
+      opacity: 0.9;
+    }
+
+    #secretLink a {
+      color: #fff;
+      background: #ff69b4;
+      padding: 12px 26px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(255,105,180,0.8);
+    }
+
+    .rose {
+      position: fixed;
+      bottom: -40px;
+      font-size: 30px;
+      animation: floatUp linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Shriddhi 💖</h1>
+
+  <p>
+    I didn’t want to ask this loudly.
+    <br><br>
+    I wanted it to be soft,
+    private,
+    and just between us.
+    <br><br>
+    So here it is —
+    <br><br>
+    <strong>Will you be mine?</strong> 💍
+  </p>
+
+  <div>
+    <button onclick="yes()">YES 💖</button>
+    <button onclick="hug()">I need a hug first 🥹</button>
+  </div>
+
+  <div id="hippo">🦛💃🎉</div>
+
+  <!-- SECRET LINK REVEALED AFTER YES -->
+  <div id="secretLink">
+    <p>💕 Since you said yes, here's a little something extra just for you...</p>
+    <a href="memories.html">Tap for our memories 💌</a>
+  </div>
+
+  <!-- BUTTON ACTIONS -->
+  <script>
+    function yes() {
+      document.getElementById("hippo").style.display = "block";
+      document.getElementById("secretLink").style.display = "block";
+      startRoses();
+    }
+
+    function hug() {
+      alert("Sending you the warmest hug 🤗💗");
+    }
+  </script>
+
+  <!-- ROSES -->
+  <script>
+    function startRoses() {
+      setInterval(() => {
+        const rose = document.createElement("div");
+        rose.classList.add("rose");
+        rose.innerHTML = "🌹";
+        rose.style.left = Math.random() * 100 + "vw";
+        rose.style.animationDuration = (4 + Math.random() * 4) + "s";
+        document.body.appendChild(rose);
+
+        setTimeout(() => {
+          rose.remove();
+        }, 9000);
+      }, 300);
+    }
+  </script>
+
+</body>
+</html>
