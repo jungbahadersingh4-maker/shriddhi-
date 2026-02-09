@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Memories 💕</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffb6c1; /* soft pink */
+      color: #ffffff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 60px;
+      font-size: 3.5em;
+      text-shadow: 0 0 10px rgba(255,255,255,0.7);
+    }
+
+    .message {
+      max-width: 900px;
+      margin: 40px auto;
+      font-size: 1.4em;
+      line-height: 2;
+      padding: 35px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 30px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 25px rgba(255, 105, 180, 0.6);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 20px 0;
+      font-size: 1.2em;
+    }
+
+    .links {
+      margin-top: 50px;
+      font-size: 1.3em;
+    }
+
+    .links a {
+      color: #fff;
+      background: #ff69b4;
+      padding: 12px 26px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(255,105,180,0.8);
+      margin: 10px;
+    }
+
+    /* Floating Hearts */
+    .heart {
+      position: fixed;
+      bottom: -50px;
+      font-size: 30px;
+      animation: floatUp linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Our Memories, Shriddhi 💖</h1>
+
+  <div class="message">
+    <p>Every moment with you feels like a new memory worth cherishing. Here are just a few reasons why you mean the world to me:</p>
+    <ul>
+      <li>🌸 Your smile lights up my day, even from afar.</li>
+      <li>💕 The way you laugh at my silly jokes makes everything better.</li>
+      <li>🌹 Your kindness and warmth make me feel like the luckiest person alive.</li>
+      <li>🥰 Every conversation with you feels like coming home.</li>
+      <li>💗 You inspire me to be a better version of myself every single day.</li>
+      <li>🌟 Your strength and grace amaze me—I'm so proud of you.</li>
+      <li>❤️ I can't imagine my life without your light in it.</li>
+    </ul>
+    <p>And that's just the beginning... I love you more with every passing moment. 💞</p>
+  </div>
+
+  <div class="links">
+    <a href="bonus.html">Dream with me 💫</a>
+    <a href="proposal.html">Back to our special moment 💌</a>
+  </div>
+
+  <!-- FLOATING HEARTS -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }
+
+    setInterval(createHeart, 400);
+  </script>
+
+</body>
+</html>
